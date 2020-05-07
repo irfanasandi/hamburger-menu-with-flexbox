@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Flexbox Menu</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <h3>Flexbox Menu</h3>
+        </div>
+        <ul class="nav-item">
+          <li class="nav-link"><a href="">Home</a></li>
+          <li class="nav-link"><a href="">About</a></li>
+          <li class="nav-link"><a href="">Products</a></li>
+          <li class="nav-link"><a href="">Shop</a></li>
+        </ul>
+        <div class="menu-btn">
+          <div class="btn-line"></div>
+          <div class="btn-line"></div>
+          <div class="btn-line"></div>
+        </div>
+      </nav>
+    </div>
+    <script>
+      const menuBtn = document.querySelector(".menu-btn");
+      const navItem = document.querySelector(".nav-item");
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      menuBtn.addEventListener("click", () => {
+        navItem.classList.toggle("show");
+        navLinks.forEach((item) => {
+          item.classList.toggle("show");
+        });
+
+        menuBtn.classList.toggle("close");
+      });
+    </script>
+  </body>
+</html>

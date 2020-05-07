@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  padding: 0 40px;
+  background: #b37399;
+}
+
+nav {
+  color: #1a1a1a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .logo {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  letter-spacing: 2px;
+}
+
+nav ul.nav-item {
+  color: #1a1a1a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50vh;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+}
+
+nav ul.nav-item .nav-link a {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+nav ul.nav-item .nav-link a:hover {
+  border-bottom: 1px solid #1a1a1a;
+  padding-bottom: 5px;
+}
+
+nav .menu-btn {
+  position: absolute;
+  right: 40px;
+  z-index: 3;
+  cursor: pointer;
+  visibility: hidden;
+  -webkit-transition: all ease-out 0.5s;
+  transition: all ease-out 0.5s;
+}
+
+nav .menu-btn .btn-line {
+  background: #1a1a1a;
+  width: 28px;
+  height: 3px;
+  margin-bottom: 3px;
+  -webkit-transition: all ease-out 0.5s;
+  transition: all ease-out 0.5s;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 0;
+    margin: 0;
+  }
+  nav .logo {
+    padding: 0 1em;
+  }
+  nav ul.nav-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 60vh;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  nav ul.nav-item {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    visibility: hidden;
+    height: 100vh;
+    width: 100vw;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: #aa628d;
+    z-index: 1;
+    overflow: hidden;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+    -webkit-transition: all ease-out 0.5s;
+    transition: all ease-out 0.5s;
+  }
+  nav ul.nav-item.show {
+    visibility: visible;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  nav ul.nav-item .nav-link {
+    -webkit-transform: translate3d(600px, 0, 0);
+            transform: translate3d(600px, 0, 0);
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    padding: 1rem 0;
+    -webkit-transition: all ease-out 0.5s;
+    transition: all ease-out 0.5s;
+  }
+  nav ul.nav-item .nav-link.show {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  nav ul.nav-item .nav-link:nth-child(1) {
+    -webkit-transition-delay: 0.1s;
+            transition-delay: 0.1s;
+  }
+  nav ul.nav-item .nav-link:nth-child(2) {
+    -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+  }
+  nav ul.nav-item .nav-link:nth-child(3) {
+    -webkit-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+  }
+  nav ul.nav-item .nav-link:nth-child(4) {
+    -webkit-transition-delay: 0.4s;
+            transition-delay: 0.4s;
+  }
+  nav .menu-btn {
+    visibility: visible;
+  }
+  nav .menu-btn.close {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  nav .menu-btn.close .btn-line:nth-child(1) {
+    -webkit-transform: rotate(45deg) translate(5px, 5px);
+            transform: rotate(45deg) translate(5px, 5px);
+  }
+  nav .menu-btn.close .btn-line:nth-child(2) {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  nav .menu-btn.close .btn-line:nth-child(3) {
+    -webkit-transform: rotate(-45deg) translate(3px, -3px);
+            transform: rotate(-45deg) translate(3px, -3px);
+  }
+}
+/*# sourceMappingURL=style.css.map */
